@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 клас - Геометрія</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>9 клас - Геометрія</h1>
+        <div class="topics-list">
+            <div class="topic-item" data-topic="Дотичні, хорди">Дотичні, хорди</div>
+            <div class="topic-item" data-topic="Правильні многокутники">Правильні многокутники</div>
+            <div class="topic-item" data-topic="Вписані та описані фігури">Вписані та описані фігури</div>
+            <div class="topic-item" data-topic="Основи векторної алгебри">Основи векторної алгебри</div>
+        </div>
+        <a href="/" class="btn">Назад до головної</a>
+    </div>
+
+    <!-- Модальне вікно -->
+    <div id="topicModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-left" id="topicContent"></div>
+            <div class="modal-right">
+                <h3>Чат</h3>
+                <div id="chatBox" class="chat-box"></div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Напишіть повідомлення...">
+                    <button id="sendMessage">Надіслати</button>
+                </div>
+            </div>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

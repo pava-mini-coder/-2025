@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.topics-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    justify-content: center;
+    margin: 0 auto; 
+    max-width: 750px; 
+    padding: 10px; 
+}
+
+.topic-item {
+    background-color: #007bff;
+    color: white;
+    padding: 75px; 
+    border-radius: 5px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.topic-item:hover {
+    background-color: #0056b3;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 95%; 
+    height: 90%; 
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+.modal-left {
+    width: 60%; 
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+.modal-right {
+    width: 40%; 
+    padding: 20px;
+    overflow-y: auto;
+}
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+.chat-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    height: 400px;
+    
+}
+.chat-input {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.chat-input button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.chat-input button:hover {
+    background-color: #0056b3;
+}
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Заголовок */
+h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Блок класу */
+.class-block {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #ecf0f1;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+}
+
+.class-block h2 {
+    color: #2980b9;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Кнопки предметів */
+.subject-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subject-buttons .btn {
+    text-decoration: none;
+    color: #ffffff;
+    background: #3498db;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subject-buttons .btn:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+.subject-buttons .btn:active {
+    background: #1f618d;
+}
+
+/* Для мобільних пристроїв */
+@media (max-width: 768px) {
+    .subject-buttons {
+        flex-direction: column;
+    }
+
+    .subject-buttons .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.content_Photo_video{
+    margin-top: 100px;
+}
+
+.photo_formuly{
+    width: 40%; 
+    height: auto;
+}
+.photo_diy{
+    width: 45%; 
+    height: 55%;
+    margin-bottom: 50px;
+}
+.rivnana{
+    width: 45%; 
+    height: 45%;
+    margin-bottom: 75px;
+}
+.photo_zadachi{
+    width: 60%; 
+    height: 60%;
+    margin-left: 200px;
+}
+.video_zadachi{
+    margin-left: 225px;
+}
+.photo_zadachi1{
+    width: 100%; 
+    height: 100%;
+}
+.content_Photo_video1{}
+.photo_zadachi2{
+    width: 100%; 
+    height: 60%;    
+}
+.photo_zadachi3{
+    margin-left: 10%;
+    width: 80%; 
+    height: 60%;
+}
+.video_zadachi3{
+    margin-left: 23%;
+}
+.photo_zadachi4{
+    width: 80%; 
+    height: 50%; 
+    margin-left: 17%;
+}
+.content_Photo_video1{
+    margin-left: 15%;
+}
+.photo_zadachi5{
+    margin-left: 10%;
+    width: 80%; 
+    height: 40%;
+}
+H1{
+    justify-content: center;
+    text-align: center;
+}

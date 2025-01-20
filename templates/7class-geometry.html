@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 клас - Геометрія</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>7 клас - Геометрія</h1>
+        <div class="topics-list">
+            <div class="topic-item" data-topic="Точки, прямі, промені, кути">Точки, прямі, промені, кути</div>
+            <div class="topic-item" data-topic="Вимірювання відрізків і кутів">Вимірювання відрізків і кутів</div>
+            <div class="topic-item" data-topic="Види трикутників">Види трикутників</div>
+            <div class="topic-item" data-topic="Ознаки рівності трикутників">Ознаки рівності трикутників</div>
+            <div class="topic-item" data-topic="Паралельні прямі та кути">Паралельні прямі та кути</div>
+        </div>
+        <a href="/" class="btn">Назад до головної</a>
+    </div>
+
+    <!-- Модальне вікно -->
+    <div id="topicModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-left" id="topicContent"></div>
+            <div class="modal-right">
+                <h3>Чат</h3>
+                <div id="chatBox" class="chat-box"></div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Напишіть повідомлення...">
+                    <button id="sendMessage">Надіслати</button>
+                </div>
+            </div>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

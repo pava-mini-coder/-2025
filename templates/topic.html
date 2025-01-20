@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ topic }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+<body>
+    <h1>{{ topic }}</h1>
+    <p>Ви зараз у розділі "{{ subject }}" для "{{ class_id }} класу".</p>
+    <form id="chat-form">
+        <label for="message-input">Запитайте чату:</label>
+        <input type="text" id="message-input" placeholder="Ваше питання...">
+        <button type="submit">Надіслати</button>
+    </form>
+    <div id="chat-response"></div>
+    <script>
+        const form = document.getElementById('chat-form');
+        const responseDiv = document.getElementById('chat-response');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const message = document.getElementById('message-input').value;
+            const response = await fetch('/ask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: message,
+                    topic: "{{ topic }}"
+                }),
+            });
+            const data = await response.json();
+            responseDiv.innerHTML = `<p>${data.response}</p>`;
+        });
+    </script>
+</body>
+</html>
